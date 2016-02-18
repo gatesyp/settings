@@ -1,2 +1,4 @@
 # vim
-For my own personal vim config files
+Holds my personal .vim folder as well as .vimrc file 
+
+Notes for vim useage located in .vimrc
