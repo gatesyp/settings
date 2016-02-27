@@ -3,6 +3,9 @@ Holds my personal .vim folder as well as .vimrc file
 
 Notes for vim useage located in .vimrc
 
+# All my first time setup installation commands
+Also install matlab  
+
 sudo apt-get install ctagger
 sudo apt-get install nautilus
 apt-get install python-pip  
@@ -22,3 +25,16 @@ https://getcomposer.org/download/
 composer global require "laravel/installer=~1.1"  
 
 mv composer.phar /usr/local/bin/composer
+
+
+
+
+Gsearch <CR>
+'query'
+select lines u want changed
+:s /query/replacement
+g
+a
+:wa
+
+then done

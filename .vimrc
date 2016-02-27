@@ -5,6 +5,7 @@ so ~/.vim/plugins.vim
 syntax enable
 let mapleader = ','                      "default leader is \, but , is much better
 set number                               "activates line numbers
+set noerrorbells visualbell t_vb=        "no error bells
 
 
 "----------------------------------------Visuals----------------------------------------
@@ -52,6 +53,9 @@ nmap <C-H> <C-W><C-H>
 
 "make it easy to edit Vimrc file
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
+"make it easy to edit my github/vim/README file when adding in new first time setup commands
+nmap <Leader>em :tabedit ~/GitHub/vim/README.md<cr>
+nmap <Leader>es :e ~/.vim/snippets/
 "add simple highlight removal
 nmap <Leader><space> :nohlsearch<cr>
 "make NERDTree easier to toggle
@@ -60,6 +64,16 @@ nmap <Leader><`> :NERDTreeToggle<cr>
 nmap <c-R> :CtrlPBufTag<cr>
 "make searching recent files easier
 nmap <c-e> :CtrlPMRUFiles<cr>
+
+
+
+
+"/
+"/Greplace.vim
+"/
+set grepprg=ag						"want to use Ag for the search
+
+let g:grep_cmd_opts = '--line_numbers --noheading'
 
 
 nmap <Leader>f :tag<space>
@@ -100,3 +114,21 @@ augroup END
 " 	- Access by ,f <query>
 " 	- If multiple tags there r different ways to see them
 " 	  	- 
+"
+"-----how to search and replace in multiple files
+" Gsearch <CR>
+" 'query'
+" select lines u want changed
+" :s /query/replacement
+" g
+" a
+" :wa
+" 
+" then done
+"
+" SURRONDING TEXT replace keys with what i want to surround with
+" cs ' "       // changes the surrounding from ' to doube quote
+" cd ' 		// deletes the surrounding '
+" cst <strong> // cahnges the surrounding tag to strong
+" S <tag>   	// creates a new surrounding tag
+"
