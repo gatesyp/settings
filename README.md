@@ -39,3 +39,5 @@ then done
 
 #installing python 2.7.9 over 7.6
 http://stackoverflow.com/questions/27568886/install-python-2-7-9-over-2-7-6
+
+smae
