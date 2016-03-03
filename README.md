@@ -12,11 +12,6 @@ apt-get install python-pip
 #install webdev environment
 apt-get install php5-cli
 http://community.linuxmint.com/tutorial/view/486  
-# install composer
-php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
-php -r "if (hash('SHA384', file_get_contents('composer-setup.php')) === 'fd26ce67e3b237fffd5e5544b45b0d92c41a4afe3e3f778e942e43ce6be197b9cdc7c251dcde6e2a52297ea269370680') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); }"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
 
 #install composer
 https://getcomposer.org/download/
@@ -38,3 +33,9 @@ a
 :wa
 
 then done
+
+
+
+
+#installing python 2.7.9 over 7.6
+http://stackoverflow.com/questions/27568886/install-python-2-7-9-over-2-7-6
