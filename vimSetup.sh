@@ -5,6 +5,7 @@ clear
 echo "Setting up vim"
 
 sudo apt-get install vim
+sudo apt-get install ctagger
 cp -r .vim ~/
 cp .vimrc ~/
 
