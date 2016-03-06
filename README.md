@@ -1,6 +1,8 @@
 Notes for vim useage located in .vimrc
 #First-Time Commands
 ```
+sudo apt-get install git
+git clone https://github.com/gatesyp/settings
 chmod 775 updatePython.sh
 chmod 775 vimSetup.sh
 ./updatePython.sh
