@@ -132,3 +132,8 @@ augroup END
 " cst <strong> // cahnges the surrounding tag to strong
 " S <tag>   	// creates a new surrounding tag
 "
+"
+" PASTE MODE
+" set paste
+" <go to insert mode and paste code>
+" set nopaste
