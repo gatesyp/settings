@@ -112,9 +112,13 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_w = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_c_gcc_args = '-fsyntax-only'
+
 
 
 
@@ -142,8 +146,3 @@ let g:syntastic_check_on_wq = 0
 " cst <strong> // cahnges the surrounding tag to strong
 " S <tag>   	// creates a new surrounding tag
 "
-"
-" PASTE MODE
-" set paste
-" <go to insert mode and paste code>
-" set nopaste
