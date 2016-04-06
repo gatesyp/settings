@@ -16,6 +16,7 @@ Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
