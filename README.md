@@ -2,6 +2,16 @@
 Notes:
 -colorscheme atom-dark-256 seems to break syntax highlighting on bash for windows
 Notes for vim useage located in .vimrc
+
+#TODO
+- automate commands in installLamp.sh
+```
+gksu gedit /etc/apache2/apache2.conf
+Include /etc/phpmyadmin/apache.conf
+/etc/init.d/apache2 restart
+
+
+```
 #First-Time Commands
 ```
 sudo apt-get install git
