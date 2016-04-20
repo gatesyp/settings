@@ -10,6 +10,11 @@ chmod 775 updatePython.sh
 chmod 775 vimSetup.sh
 ./updatePython.sh
 ./vimSetup.sh
+
+#TODO
+-automatic the info below
+-make script specific to windows
+-make master script which decides which scripts to run based on OS 
 ```
 #install composer
 https://getcomposer.org/download/
