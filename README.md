@@ -1,4 +1,6 @@
 # vim
+Notes:
+-colorscheme atom-dark-256 seems to break syntax highlighting on bash for windows
 Notes for vim useage located in .vimrc
 #First-Time Commands
 ```
