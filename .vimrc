@@ -1,11 +1,10 @@
 set nocompatible              		" be iMproved, required
-
 so ~/.vim/plugins.vim
 
 syntax enable
-let mapleader = ','                      "default leader is \, but , is much better
-set number                               "activates line numbers
-set noerrorbells visualbell t_vb=        "no error bells
+let mapleader = ','                      " default leader is \, but , is much better
+set number                               " activates line numbers
+set noerrorbells visualbell t_vb=        " no error bells
 
 
 "----------------------------------------Visuals----------------------------------------
@@ -13,7 +12,8 @@ set noerrorbells visualbell t_vb=        "no error bells
 
 
 
-set linespace=15                         "set linespacings for gui vim
+set linespace=15                         " set linespacings for gui vim
+set tabstop=8				 " set tabs to look like 8 spaces long
 set t_Co=256
 colorscheme atom-dark-256
 set guioptions-=e
@@ -51,18 +51,18 @@ nmap <C-H> <C-W><C-H>
 
 
 
-"make it easy to edit Vimrc file
+" make it easy to edit Vimrc file
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
-"make it easy to edit my github/vim/README file when adding in new first time setup commands
+" make it easy to edit my github/vim/README file when adding in new first time setup commands
 nmap <Leader>em :tabedit ~/GitHub/vim/README.md<cr>
 nmap <Leader>es :e ~/.vim/snippets/
-"add simple highlight removal
+" add simple highlight removal
 nmap <Leader><space> :nohlsearch<cr>
-"make NERDTree easier to toggle
+" make NERDTree easier to toggle
 nmap <Leader><`> :NERDTreeToggle<cr>
-"make ctl p tag searching much easier - i.e function names
+" make ctl p tag searching much easier - i.e function names
 nmap <c-R> :CtrlPBufTag<cr>
-"make searching recent files easier
+" make searching recent files easier
 nmap <c-e> :CtrlPMRUFiles<cr>
 
 
@@ -71,7 +71,7 @@ nmap <c-e> :CtrlPMRUFiles<cr>
 "/
 "/Greplace.vim
 "/
-set grepprg=ag						"want to use Ag for the search
+set grepprg=ag						" want to use Ag for the search
 
 let g:grep_cmd_opts = '--line_numbers --noheading'
 
@@ -99,7 +99,7 @@ let NERDTreeHijackNetrw = 0
 
 
 
-"Automaticlaly source the vimrc on save
+" Automaticlaly source the vimrc on save
 augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
@@ -145,4 +145,4 @@ let g:syntastic_c_gcc_args = '-fsyntax-only'
 " cd ' 		// deletes the surrounding '
 " cst <strong> // cahnges the surrounding tag to strong
 " S <tag>   	// creates a new surrounding tag
-"
+
