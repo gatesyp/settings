@@ -1,21 +1,27 @@
 set nocompatible              		" be iMproved, required
+
 so ~/.vim/plugins.vim
 
-syntax enable
-let mapleader = ','                      " default leader is \, but , is much better
-set number                               " activates line numbers
-set noerrorbells visualbell t_vb=        " no error bells
+"----------------------------------------Auto-Commands----------------------------------------
+syntax on
+colorscheme desert
+"Automaticlaly source the vimrc on save
+augroup autosourcing
+	autocmd!
+	autocmd BufWritePost .vimrc source %
+augroup END
+filetype plugin indent on
+let mapleader = ','                      "default leader is \, but , is much better
+set number                               "activates line numbers
+set noerrorbells visualbell t_vb=        "no error bells
 
 
 "----------------------------------------Visuals----------------------------------------
 
 
 
-
-set linespace=15                         " set linespacings for gui vim
-set tabstop=8				 " set tabs to look like 8 spaces long
+set linespace=15                         "set linespacings for gui vim
 set t_Co=256
-colorscheme atom-dark-256
 set guioptions-=e
 set guioptions-=l
 set guioptions-=L
@@ -53,6 +59,8 @@ nmap <C-H> <C-W><C-H>
 
 " make it easy to edit Vimrc file
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
+" make it easy to edit plugins
+nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
 " make it easy to edit my github/vim/README file when adding in new first time setup commands
 nmap <Leader>em :tabedit ~/GitHub/vim/README.md<cr>
 nmap <Leader>es :e ~/.vim/snippets/
@@ -64,13 +72,24 @@ nmap <Leader><`> :NERDTreeToggle<cr>
 nmap <c-R> :CtrlPBufTag<cr>
 " make searching recent files easier
 nmap <c-e> :CtrlPMRUFiles<cr>
+" ctl + num to switch between tabs
+map <C-S-]> gt
+map <C-S-[> gT
+map <C-1> 1gt
+map <C-2> 2gt
+map <C-3> 3gt
+map <C-4> 4gt
+map <C-5> 5gt
+map <C-6> 6gt
+map <C-7> 7gt
+map <C-8> 8gt
+map <C-9> 9gt
+map <C-0> :tablast<CR>
 
 
-
-
-"/
-"/Greplace.vim
-"/
+"
+" Greplace.vim
+"
 set grepprg=ag						" want to use Ag for the search
 
 let g:grep_cmd_opts = '--line_numbers --noheading'
@@ -82,35 +101,27 @@ nmap <Leader>f :tag<space>
 
 
 
-"/
+"
 " Ctrlp
-"/
+"
 let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
-"/
+"
 " NERDTree
-"/
+"
 let NERDTreeHijackNetrw = 0
 
 
 
-"----------------------------------------Auto-Commands----------------------------------------
-
-
-
-" Automaticlaly source the vimrc on save
-augroup autosourcing
-	autocmd!
-	autocmd BufWritePost .vimrc source %
-augroup END
 
 
 "----------------------------------------Syntastic----------------------------------------
-set statusline+=%#warningmsg#
+" set statusline+=%#warningmsg#				" turn off warnings
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_cpp_compiler_options = '-std=c++0x'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_w = 1
 let g:syntastic_auto_loc_list = 1
@@ -145,4 +156,4 @@ let g:syntastic_c_gcc_args = '-fsyntax-only'
 " cd ' 		// deletes the surrounding '
 " cst <strong> // cahnges the surrounding tag to strong
 " S <tag>   	// creates a new surrounding tag
-
+"
