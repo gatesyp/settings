@@ -12,6 +12,9 @@ sudo apt-get update
 adduser steve
 usermod -aG sudo steve
 
+# install pip
+sudo apt-get install python-pip
+pip install --upgrade pip
 # install webdev tools
 
 # mean stack
