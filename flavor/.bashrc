@@ -8,9 +8,9 @@ mvcd (){ mv "$1" "$2"
 }
 # command to make directory and change directory with just one command
 mkcd (){ mkdir "$1"  
-       	 cd "$1" 
+		cd "$1" 
 }
-# command to make directory and change directory with just one command
+# command to copy recursibely and change directory with just one command
 cpcdr (){ cp -r "$1" "$2" 
-       	 cd "$2" 
+		cd "$2" 
 }
