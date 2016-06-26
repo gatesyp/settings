@@ -4,7 +4,8 @@ so ~/.vim/plugins.vim
 
 "----------------------------------------Auto-Commands----------------------------------------
 syntax on
-colorscheme desert
+colorscheme atom-dark-256
+"colorscheme desert  			"for compatability
 "Automaticlaly source the vimrc on save
 augroup autosourcing
 	autocmd!
