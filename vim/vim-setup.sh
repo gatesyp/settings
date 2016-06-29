@@ -9,7 +9,7 @@ sudo apt-get install ctagger
 cp -r .vim ~/
 cp .vimrc ~/
 # copy the file which will update github to reflect changes
-cp updateVimeRepo.sh ~/
+cp update-vim-repo.sh ~/
 
 # install package manager
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
