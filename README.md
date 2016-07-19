@@ -1,16 +1,6 @@
 # vim
 Notes:
 <br>
-- colorscheme atom-dark-256 seems to break syntax highlighting on bash for windows
-- vim cheat sheet located in .vimrc
-
-#Interesting Plugins
-- https://github.com/thunderboltsid/vim-configuration
-- https://github.com/Valloric/YouCompleteMe#full-installation-guide
-- https://github.com/Shougo/vimproc.vim/blob/master/README.mkd
-- https://github.com/suan/vim-instant-markdown/
-- https://github.com/JetBrains/ideavim
-
 #TODO
 - add multiple OS support (dif instructions based on current OS)
 - notes in /server-setup/server-setup.sh
@@ -19,9 +9,7 @@ Notes:
 ```
 sudo apt-get install git
 git clone https://github.com/gatesyp/settings
-cd vim
-./vim-setup.sh
-cd ../env-setup
+cd env-setup
 ./env-setup.sh
 
 ```
